@@ -1,0 +1,19 @@
+{
+  "name": "untitled",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "angular": "^1.4.7",
+    "babel-core": "^6.1.2",
+    "babel-loader": "^6.0.1",
+    "jquery": "^2.1.4",
+    "lodash": "^3.10.1",
+    "webpack": "^1.12.3"
+  }
+}
