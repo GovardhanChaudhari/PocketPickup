@@ -2,28 +2,31 @@ var webpack = require('webpack');
 
 module.exports = {
     entry: {
-        app: "./app/app.js"
-        //vendor: ["jquery","angular"],
+        app: "./index.js"
     },
     output: {
         path: '../build',
-        filename: 'bundle.js',
+        filename: 'bundle.js'
 
+    },
+    externals: {
+        // require("jquery") is external and available
+        //  on the global var jQuery
+        "jquery": "jQuery",
+        "$": "jQuery",
+        "angular":"angular"
     },
     module: {
         loaders: [
             {
                 test: /\.js$/,
-                loader: "babel",
-                query: {
-                    cacheDirectory: true,
-                    presets: ['es2015']
-                }
+                loaders: ["ng-annotate", "babel?presets[]=es2015&cacheDirectory=true"]
             }
         ]
     },
     plugins: [
-        // new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.bundle.js")
+       //  new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"common", /* filename= */"common.js"),
+       //  new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"angular", /* filename= */"angular.bundle.js")
         //,new webpack.optimize.UglifyJsPlugin()
     ]
 };

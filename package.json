@@ -15,5 +15,10 @@
     "jquery": "^2.1.4",
     "lodash": "^3.10.1",
     "webpack": "^1.12.3"
+  },
+  "dependencies": {
+    "angular-ui-router": "^0.2.15",
+    "babel-preset-es2015": "^6.1.18",
+    "ng-annotate-loader": "0.0.10"
   }
 }

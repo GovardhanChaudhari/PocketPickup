@@ -1,9 +1,3 @@
-export default class Greeting {
-    testFunction(){
+let app =  angular.module('ppApp', []);
 
-    }
-    toString() {
-        this.testFunction(()=>{});
-        return 'Hello visitor';
-    }
-}
+export { app};
